@@ -15,4 +15,4 @@
 
 
 
-$router->post('/search', 'SearchController@filter');
+$router->post('/search', 'SearchController@search_parametre');

@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Notices;
-use App\Words;
+use App\Notice;
+use App\Search\NoticeSearch;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,6 +37,17 @@ class SearchController extends Controller
          
        
     }
+
+    public function search_parametre(Request $request){
+        
+        return NoticeSearch::apply($request);
+ 
+         
+          
+        
+     
+
     
    
+}
 }
