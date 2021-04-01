@@ -10,7 +10,7 @@ interface Search
     /**
      * Apply a given search value to the builder instance.
      * 
-     * @param Builder $builder
+     * @param Request $request
      * @param mixed $value
      * @return Builder $builder
      */
