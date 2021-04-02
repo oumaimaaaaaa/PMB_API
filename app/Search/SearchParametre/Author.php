@@ -8,8 +8,8 @@ class Author
     public static function apply($builder, $value)
     {
         $builder
-        ->leftjoin('responsability','notices.notice_id','responsability.responsability_notice')
-        ->leftjoin('authors','responsability.responsability_author','authors.author_id',)
+        ->join('responsability','notices.notice_id','responsability.responsability_notice')
+        ->join('authors','responsability.responsability_author','authors.author_id',)
         ->where('authors.author_name','like','%'.$value.'%');
 
         return $builder;
