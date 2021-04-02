@@ -10,7 +10,7 @@ class Word
     {
         $tab=explode(" ",$value); //spliting the phrase that the user is looking for
 
-        $builder
+        $builder->select('notices.*')
          ->join('notices_mots_global_index','notices.notice_id','=','notices_mots_global_index.id_notice')
          ->join('words','words.id_word','=','notices_mots_global_index.num_word')
          ->whereIn('words.word',$tab);
